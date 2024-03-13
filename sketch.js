@@ -333,7 +333,6 @@ function keyPressed() {
       dis.push(dist(x, y, x2[i], y2[i]));
     }
     if (!finishEating) {
-      // bubbleSort(dis);
       startMove = true;
     }
   }
