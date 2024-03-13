@@ -49,7 +49,7 @@ function draw() {
     fill(0);
     textSize(50);
     textAlign(CENTER);
-    text("Biology Laboratory", 400, 70);
+    text("Interactive Biology Laboratory", 400, 70);
     scale(1.8);
     image(img, 20, 55);
     pop();
@@ -106,7 +106,6 @@ function draw() {
       time--;
     } else {
       for (let i = 0; i < 100; i++) {
-        // translate(width / 2, height / 2);
         eXs[i] = random(0, 800);
         eYs[i] = random(0, 500);
         ws[i] = random(3, 10);
@@ -137,7 +136,7 @@ function draw() {
     }
     pop();
   }
-
+//movement
   if (
     bgpattern == 0 ||
     bgpattern == 1 ||
@@ -153,13 +152,7 @@ function draw() {
   }
 
   if (x < 30 || x > width - 30) {
-    // if(x < 30){
-    //   x += 20
-    // }else{
-    //   x-=20;
-    // }
     speedX = -speedX;
-    // console.log(x);
   }
   if (y < 30 || y > height - 65) {
     speedY = -speedY;
@@ -216,7 +209,6 @@ function drawBird(birdColor) {
   push();
 
   translate(x, y);
-  //scale(s);
   Size = map(y, 0, height, 0.2, 2);
   scale(Size);
   scale(map(foodEaten, 0, 100, 1, 8));
