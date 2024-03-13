@@ -49,7 +49,7 @@ function draw() {
     fill(0);
     textSize(50);
     textAlign(CENTER);
-    text("Interactive Biology Laboratory", 400, 70);
+    text("Interactive Biology Lab", 400, 70);
     scale(1.8);
     image(img, 20, 55);
     pop();
