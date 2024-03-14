@@ -62,13 +62,13 @@ function draw() {
   drawPlant(210, 200, 1.3);
   drawPlant(195, 210, 0.7);
   drawPlant(60, 220, 1.5);
-  drawPlant(650, 170, 1.2);
+  drawPlant(650, 170, 1.6);
   drawPlant(400, 240, 1.5);
-  drawPlant(700, 400, 1.7);
-  drawPlant(300, 300, 1.3);
+  drawPlant(700, 400, 3);
+  drawPlant(300, 300, 2.4);
   drawPlant(320, 160, 1.1);
-  drawPlant(100, 400, 1.7);
-  drawPlant(500, 350, 1.5);
+  drawPlant(100, 400, 3);
+  drawPlant(500, 350, 2.6);
 
   //text
 
@@ -209,7 +209,7 @@ function drawBird(birdColor) {
   push();
 
   translate(x, y);
-  Size = map(y, 0, height, 0.2, 2);
+  Size = map(y, 0, height, 0.2, 1.5);
   scale(Size);
   scale(map(foodEaten, 0, 100, 1, 8));
   fitTime--;
@@ -275,7 +275,7 @@ function drawText(TX, TY) {
   fill(212, 181, 127);
   rect(262, -30, 20, 90);
   fill(212, 181, 127);
-  rect(35, 0, 460, 112);
+  rect(35, 0, 460, 100);
   textSize(27);
   fill("red");
   text("NOTICE", 215, 25);
@@ -292,7 +292,6 @@ function drawText(TX, TY) {
   text("Change temperature: press h / c", 40, 60);
   text("Change humidity: press r / d", 40, 75);
   text("Feed it: press f", 40, 90);
-  text("Control its direction: press arrows", 40, 105);
   pop();
 }
 
@@ -309,22 +308,6 @@ function keyPressed() {
   }
   if (key == "c") {
     bgpattern = 4;
-  }
-  if (keyCode == 37) {
-    pattern = 5;
-    speedX = -1;
-  }
-  if (keyCode == 39) {
-    pattern = 6;
-    speedX = 1;
-  }
-  if (keyCode == 38) {
-    pattern = 7;
-    speedY = -1;
-  }
-  if (keyCode == 40) {
-    pattern = 8;
-    speedY = 1;
   }
   if (key == "f") {
     x2.push(mouseX);
