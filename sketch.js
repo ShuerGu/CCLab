@@ -18,7 +18,6 @@ let w = 0;
 let h = 0;
 let fitTime = 500;
 let bgpattern = 0;
-let setV = false;
 let startMove = false;
 let interval = 50;
 let finishEating = false;
